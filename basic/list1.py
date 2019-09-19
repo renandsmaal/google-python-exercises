@@ -46,8 +46,7 @@ def front_x(words):
             sort_word.append(word)
         x_word.sort()
         sort_word.sort()
-    new_list = x_word + sort_word
-    return new_list
+    return x_word + sort_word
 
 
 # C. sort_last
