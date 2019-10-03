@@ -59,25 +59,27 @@ def mimic_dict(filename):
         else:
             mimic_dict[prev].append(word)
         prev = word
-    print(mimic_dict)
+    return mimic_dict
 
 
 def print_mimic(mimic_dict, word):
-
-
-    """Given mimic dict and start word, prints 200 random words."""
-    return
+    for i in range(200):
+        if word in mimic_dict.keys():
+            word = random.choice(list(mimic_dict[word]))
+        else:
+            word = random.choice(list(mimic_dict.keys()))
+        print(word)
 
 
 # Provided main(), calls mimic_dict() and mimic()
 def main():
-  if len(sys.argv) != 2:
-    print('usage: ./mimic.py file-to-read')
-    sys.exit(1)
+    if len(sys.argv) != 2:
+        print('usage: ./mimic.py file-to-read')
+        sys.exit(1)
 
-  dict = mimic_dict(sys.argv[1])
-  print_mimic(dict, '')
+    dict = mimic_dict(sys.argv[1])
+    print(print_mimic(dict, ''))
 
 
 if __name__ == '__main__':
-  main()
+    main()

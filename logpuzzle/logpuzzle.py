@@ -40,6 +40,7 @@ def read_urls(filename):
     urls = sorted(urls)
 
     def url_key(urls):
+        print(urls)
         key = urls.split('-')[-1]
         return key
 

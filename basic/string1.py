@@ -26,8 +26,7 @@
 def donuts(count):
     if count >= 10:
         return "Number of donuts: many"
-    else:
-        return "Number of donuts: {}".format(count)
+    return "Number of donuts: {}".format(count)
 
 
 # B. both_ends
@@ -38,8 +37,7 @@ def donuts(count):
 def both_ends(s):
     if len(s) < 2:
         return ''
-    else:
-        return ''.join([s[0:2], s[-2:]])
+    return ''.join([s[0:2], s[-2:]])
 
 
 # C. fix_start
